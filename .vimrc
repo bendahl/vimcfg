@@ -17,6 +17,9 @@ set smartcase
 set incsearch
 set virtualedit=block
 
+" custom commands
+command Prettyjson execute "%!python -m json.tool"
+
 " Color modifications for vimdiff
 highlight DiffAdd    cterm=bold ctermfg=7* ctermbg=2* gui=none guifg=bg guibg=Red
 highlight DiffDelete cterm=bold ctermfg=7* ctermbg=1* gui=none guifg=bg guibg=Red
