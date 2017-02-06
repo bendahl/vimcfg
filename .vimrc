@@ -20,9 +20,7 @@ set smartcase
 set incsearch
 set virtualedit=block
 
-" Omni completion settings in order to enable auto complete (especially useful in combination with ctags
 filetype plugin on
-set omnifunc=syntaxcomplete#Complete
 
 " make recursive filesearch within current dir default
 set path+=**
@@ -34,4 +32,10 @@ highlight DiffChange cterm=bold ctermfg=7* ctermbg=7  gui=none guifg=bg guibg=Re
 highlight DiffText   cterm=bold ctermfg=7* ctermbg=5* gui=none guifg=bg guibg=Red
 
 " Color modifications for autocomplete
-highlight Pmenu ctermbg=Blue ctermfg=Yellow
+highlight Pmenu ctermbg=Lightblue ctermfg=Yellow
+
+" vim-go specific settings
+au FileType go nmap <leader>gd <Plug>(go-doc)
+au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
+au FileType go nmap <leader>i <Plug>(go-implements)
+au FileType go nmap <leader>r <Plug>(go-rename)
