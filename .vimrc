@@ -1,8 +1,11 @@
-nmap <silent> <F4> <C-W>gf:tabm 999<CR>
-nmap <silent> <F3> :Te<CR>
-nmap <silent> <F1> :tabp<CR>
-nmap <silent> <F2> :tabn<CR>
+" Close tab on Ctrl+F4
+nmap <Esc>O1;5S :tabclose<CR>
+" Previous tab using Alt+Left
+nmap <Esc>[1;3D :tabp<CR>
+" Next tab using Alt+Right
+nmap <Esc>[1;3C :tabn<CR>
 
+" Syntax highlighting and some other useful defaults
 syntax on
 set number
 set ruler
@@ -17,11 +20,18 @@ set smartcase
 set incsearch
 set virtualedit=block
 
-" custom commands
-command Prettyjson execute "%!python -m json.tool"
+" Omni completion settings in order to enable auto complete (especially useful in combination with ctags
+filetype plugin on
+set omnifunc=syntaxcomplete#Complete
+
+" make recursive filesearch within current dir default
+set path+=**
 
 " Color modifications for vimdiff
 highlight DiffAdd    cterm=bold ctermfg=7* ctermbg=2* gui=none guifg=bg guibg=Red
 highlight DiffDelete cterm=bold ctermfg=7* ctermbg=1* gui=none guifg=bg guibg=Red
 highlight DiffChange cterm=bold ctermfg=7* ctermbg=7  gui=none guifg=bg guibg=Red
 highlight DiffText   cterm=bold ctermfg=7* ctermbg=5* gui=none guifg=bg guibg=Red
+
+" Color modifications for autocomplete
+highlight Pmenu ctermbg=Blue ctermfg=Yellow
