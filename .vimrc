@@ -1,3 +1,6 @@
+" using https://github.com/albertorestifo/github.vim 
+colorscheme github
+
 " Close tab on Ctrl+F4
 nmap <Esc>O1;5S :tabclose<CR>
 " Previous tab using Alt+Left
@@ -24,15 +27,6 @@ filetype plugin on
 
 " make recursive filesearch within current dir default
 set path+=**
-
-" Color modifications for vimdiff
-highlight DiffAdd    cterm=bold ctermfg=7* ctermbg=2* gui=none guifg=bg guibg=Red
-highlight DiffDelete cterm=bold ctermfg=7* ctermbg=1* gui=none guifg=bg guibg=Red
-highlight DiffChange cterm=bold ctermfg=7* ctermbg=7  gui=none guifg=bg guibg=Red
-highlight DiffText   cterm=bold ctermfg=7* ctermbg=5* gui=none guifg=bg guibg=Red
-
-" Color modifications for autocomplete
-highlight Pmenu ctermbg=Lightblue ctermfg=Yellow
 
 " vim-go specific settings
 au FileType go nmap <leader>gd <Plug>(go-doc)
