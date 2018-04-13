@@ -1,6 +1,3 @@
-" using https://github.com/albertorestifo/github.vim 
-colorscheme github
-
 " Close tab on Ctrl+F4
 nmap <Esc>O1;5S :tabclose<CR>
 " Previous tab using Alt+Left
@@ -22,14 +19,10 @@ set ignorecase
 set smartcase
 set incsearch
 set virtualedit=block
+set nowrap
 
 filetype plugin on
 
 " make recursive filesearch within current dir default
 set path+=**
 
-" vim-go specific settings
-au FileType go nmap <leader>gd <Plug>(go-doc)
-au FileType go nmap <leader>gv <Plug>(go-doc-vertical)
-au FileType go nmap <leader>i <Plug>(go-implements)
-au FileType go nmap <leader>r <Plug>(go-rename)
