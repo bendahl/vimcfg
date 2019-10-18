@@ -1,5 +1,5 @@
-" Close tab on Ctrl+F4
-nmap <Esc>O1;5S :tabclose<CR>
+" Close tab on Ctrl+w
+nmap <C-w> :tabclose<CR>
 " Previous tab using Alt+Left
 nmap <Esc>[1;3D :tabp<CR>
 " Next tab using Alt+Right
@@ -8,6 +8,11 @@ nmap <Esc>[1;3C :tabn<CR>
 nmap <C-n> :tabnew<CR>
 " Open file open dialog using Ctrl+o
 nmap <C-o> :tabe .<CR>
+" Move tab right using Ctrl+Alt+Right
+nmap <C-A-Right> :tabm+<CR>
+" Move tab left using Ctrl+Alt+Left
+nmap <C-A-Left> :tabm-<CR>
+
 
 " Syntax highlighting and some other useful defaults
 syntax on
