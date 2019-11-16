@@ -12,7 +12,8 @@ nmap <C-o> :tabe .<CR>
 nmap <C-A-Right> :tabm+<CR>
 " Move tab left using Ctrl+Alt+Left
 nmap <C-A-Left> :tabm-<CR>
-
+" Toggle NERDTree
+map <F2> :NERDTreeToggle<CR>
 
 " Syntax highlighting and some other useful defaults
 syntax on
