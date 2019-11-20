@@ -1,5 +1,5 @@
-" Close tab on Ctrl+w
-nmap <C-w> :tabclose<CR>
+" Close tab on F5
+map <F5> :tabclose<CR>
 " Previous tab using Alt+Left
 nmap <Esc>[1;3D :tabp<CR>
 " Next tab using Alt+Right
