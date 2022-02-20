@@ -1,5 +1,5 @@
-" Close tab on F5
-map <F5> :tabclose<CR>
+" Close tab on F4
+map <F4> :tabclose<CR>
 " Previous tab using Alt+Left
 nmap <Esc>[1;3D :tabp<CR>
 " Next tab using Alt+Right
@@ -12,8 +12,10 @@ nmap <C-o> :tabe .<CR>
 nmap <C-A-Right> :tabm+<CR>
 " Move tab left using Ctrl+Alt+Left
 nmap <C-A-Left> :tabm-<CR>
-" Toggle NERDTree
-map <F2> :NERDTreeToggle<CR>
+" Move line down
+map <C-Down> :m+<CR>
+" Move line up
+map <C-UP> :m-2<CR>
 
 " Syntax highlighting and some other useful defaults
 syntax on
