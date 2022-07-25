@@ -32,6 +32,7 @@ set smartcase
 set incsearch
 set virtualedit=block
 set nowrap
+set clipboard=unnamedplus
 
 filetype plugin on
 
